@@ -1,0 +1,26 @@
+
+<div class="container">
+
+<div class="row">
+
+<div class="col-md-offset-4 col-md-4 text-center">
+
+<p class="title">Your tasks</p>
+
+<ul>
+    <% @tasks.each do |task| %>
+     <li>
+      <%= link_to task.name, task_path(task), class: "text-grey"%>
+      <%= link_to "Update", edit_task_path(task), class: "btn btn-primary text-margin" %>
+      <%= link_to "Destroy", task_path(task), :method => :delete, class: "btn btn-danger text-margin" %>
+     </li>
+    <% end %>
+</ul>
+
+<p><%= link_to "Add new task", tasks_new_path, class: "btn btn-success" %></p>
+
+</div>
+
+</div>
+
+</div>

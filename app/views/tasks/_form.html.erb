@@ -1,0 +1,10 @@
+
+<%= form_for @task do |f|   %>
+<%= f.label :name %>
+<%= f.text_field :name, class: "form-control text-margin" %>
+<%= f.label :status %>
+<%= f.text_field :status, class: "form-control text-margin"   %>
+<%= f.submit :create, class: "btn btn-success text-margin" %>
+<% end %>
+
+
